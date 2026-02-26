@@ -50,19 +50,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchValue = searchInput.value.toLowerCase();
     const selectedCategory = filterSelect.value;
 
-    // Search filter
+
     filteredTools = filteredTools.filter(tool =>
       tool.name.toLowerCase().includes(searchValue)
     );
 
-    // Category filter
+
     if (selectedCategory !== "All") {
       filteredTools = filteredTools.filter(tool =>
         tool.category === selectedCategory
       );
     }
 
-    // Sort
+
     filteredTools.sort((a, b) => {
       if (sortAscending) {
         return a.name.localeCompare(b.name);
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     renderTools(filteredTools);
   }
 
-  // Event listeners
+
   searchInput.addEventListener("input", applyFilters);
   filterSelect.addEventListener("change", applyFilters);
 
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     applyFilters();
   });
 
-  // Initial render
+
   renderTools(tools);
 
 });
