@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const loginButton = document.getElementById("login-button");
   const togglePassword = document.getElementById("togglePassword");
 
-  // Toggle password visibility
+
   togglePassword.addEventListener("click", function () {
     const passwordInput = document.getElementById("password");
 
@@ -16,22 +16,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Login button click
+
   loginButton.addEventListener("click", function () {
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    // Simple password check (fake authentication)
+  
     if (password === "password") {
 
-      // Store session data
+
       sessionStorage.setItem("loggedIn", "true");
       sessionStorage.setItem("username", username);
 
       console.log("Login successful");
 
-      // Redirect to dashboard
+
       window.location.href = "dashboard.html";
 
     } else {
